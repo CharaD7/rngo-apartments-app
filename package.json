@@ -13,6 +13,7 @@
         "eslint --fix"
       ]
     },
+    "prepare": "husky install",
     "reset": "expo start --clear",
     "web": "expo start --web",
     "test": "jest --watchAll"
