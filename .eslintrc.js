@@ -33,7 +33,7 @@ module.exports = {
         project: './tsconfig.json',
         sourceType: 'module',
     },
-    plugins: ['jest', 'import', 'react', 'react-hooks', 'react-native', '@typescript-eslint'],
+    plugins: ['jest', 'import', 'react', 'react-hooks', 'react-native', '@typescript-eslint', 'prettier'],
     rules: {
         'import/order': [
             'error',
@@ -66,7 +66,7 @@ module.exports = {
         'linebreak-style': 'off',
         "no-extra-semi": ["error"],
         "no-use-before-define": "off",
-        // quotes: ['error', 'double'],
+        'prettier/prettier': 'error',
         "react/jsx-filename-extension": [2, { extensions: [".js", ".jsx", ".ts", ".tsx"] }],
         "react-native/no-inline-styles": 2,
         "react-native/no-color-literals": 2,

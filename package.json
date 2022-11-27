@@ -63,5 +63,10 @@
     "react-test-renderer": "18.1.0",
     "typescript": "*"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "private": true
 }
