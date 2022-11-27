@@ -5,10 +5,13 @@ module.exports = {
         jest: true,
     },
     extends: [
-        'airbnb-typescript',
-        'airbnb/hooks',
+        'eslint:recommended',
         'plugin:import/recommended',
         'plugin:import/typescript',
+        'plugin:react/recommended',
+        'plugin:react-hooks/recommended',
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:@typescript-eslint/recommended',
         'plugin:jest/recommended',
         'plugin:prettier/recommended',
@@ -30,7 +33,7 @@ module.exports = {
         project: './tsconfig.json',
         sourceType: 'module',
     },
-    plugins: ['react', 'react-native', 'jest', 'import'],
+    plugins: ['jest', 'import', 'react', 'react-hooks', 'react-native', '@typescript-eslint'],
     rules: {
         'import/order': [
             'error',
