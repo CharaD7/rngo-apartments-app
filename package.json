@@ -4,15 +4,11 @@
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
+    "eslint": "eslint --fix",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "lint-staged": {
-      "*.{js,jsx,ts,tsx}": [
-        "prettier --ignore-unknown --write .",
-        "eslint --fix"
-      ]
-    },
+    "prettier": "prettier --ignore-unknown --write .",
     "prepare": "husky install",
     "reset": "expo start --clear",
     "web": "expo start --web",
@@ -64,6 +60,12 @@
     "prettier": "^2.8.0",
     "react-test-renderer": "18.1.0",
     "typescript": "*"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --ignore-unknown --write .",
+      "eslint --fix"
+    ]
   },
   "husky": {
     "hooks": {
