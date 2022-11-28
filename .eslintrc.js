@@ -17,7 +17,6 @@ module.exports = {
     'plugin:prettier/recommended',
     // '@react-native-community',
     'prettier',
-    'prettier/react',
   ],
   globals: {
     Atomics: 'readonly',
@@ -68,10 +67,19 @@ module.exports = {
     ],
     'linebreak-style': 'off',
     'no-extra-semi': ['error'],
-    'no-use-before-define': 'off',
+    '@typescript-eslint/no-namespace': 'off',
+    '@typescript-eslint/no-use-before-define': [
+      'error',
+      {
+        functions: false,
+        classes: false,
+        variables: false,
+        allowNamedExports: false,
+      },
+    ],
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
-    'react-native/no-inline-styles': 2,
+    'react-native/no-inline-styles': 'off',
     'react-native/no-color-literals': 2,
     semi: [
       'error',
@@ -81,7 +89,6 @@ module.exports = {
       },
     ],
     'sort-imports': ['error', { ignoreCase: true, ignoreDeclarationSort: true }],
-    '@typescript-eslint/no-use-before-define': 'error',
   },
   settings: {
     'import/parsers': {

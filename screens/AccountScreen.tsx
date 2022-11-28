@@ -1,11 +1,13 @@
-import { View, Text } from 'react-native';
 import React from 'react';
+import { Text } from 'react-native';
+
+import { Screen } from '../components/Screen';
 
 const AccountScreen = () => {
   return (
-    <View>
-      <Text>AccountScreen</Text>
-    </View>
+    <Screen>
+      <Text>Account Screen</Text>
+    </Screen>
   );
 };
 
