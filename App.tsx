@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import * as eva from '@eva-design/eva';
 import { ApplicationProvider, Layout, Text } from '@ui-kitten/components';
+import { useFonts } from 'expo-font';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
@@ -15,7 +16,11 @@ export default function App() {
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
 
-  if (!isLoadingComplete) {
+  const [fontsLoaded] = useFonts({
+    'OpenSans-Regular': require('./assets/fonts/OpenSans-Regular.ttf'),
+  });
+
+  if (!fontsLoaded && !isLoadingComplete) {
     return null;
   } else {
     return (
