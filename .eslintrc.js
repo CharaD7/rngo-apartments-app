@@ -68,6 +68,8 @@ module.exports = {
     'linebreak-style': 'off',
     'no-extra-semi': ['error'],
     '@typescript-eslint/no-namespace': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-member-access': 'off',
     '@typescript-eslint/no-use-before-define': [
       'error',
       {
@@ -80,7 +82,7 @@ module.exports = {
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     'react-native/no-inline-styles': 'off',
-    'react-native/no-color-literals': 2,
+    'react-native/no-color-literals': 'off',
     semi: [
       'error',
       'always',

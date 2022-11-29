@@ -4,19 +4,18 @@
  *
  */
 import * as React from 'react';
-import { ColorSchemeName, Pressable } from 'react-native';
+import { ColorSchemeName } from 'react-native';
 
 import { EvilIcons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { DarkTheme, DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import Colors from '../constants/Colors';
-import useColorScheme from '../hooks/useColorScheme';
 import AccountScreen from '../screens/AccountScreen';
 import SavedScreen from '../screens/SavedScreen';
 import SearchScreen from '../screens/SearchScreen';
-import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
+import { theme } from '../theme';
+import { RootStackParamList, RootTabParamList } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
@@ -56,7 +55,7 @@ function BottomTabNavigator() {
     <BottomTab.Navigator
       initialRouteName="Search"
       screenOptions={{
-        tabBarActiveTintColor: 'black',
+        tabBarActiveTintColor: theme['color-primary-500'],
       }}
     >
       <BottomTab.Screen
