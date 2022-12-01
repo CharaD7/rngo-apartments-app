@@ -1,5 +1,5 @@
-import React from 'react';
-import { Dimensions, Image, StyleSheet, View } from 'react-native';
+import React, { useRef } from 'react';
+import { Dimensions, FlatList, Image, StyleSheet, View } from 'react-native';
 
 import { EvilIcons } from '@expo/vector-icons';
 import { Button, Text } from '@ui-kitten/components';
@@ -28,27 +28,67 @@ const SearchScreen = () => {
     tags: ['Parking'],
   };
 
+  const flatListRef = useRef<FlatList | null>(null);
+  const viewConfig = { viewAreaCoveragePercentThreshold: 95 };
+
   return (
     <Screen style={{ marginHorizontal: LISTMARGIN }}>
-      <View
-        style={{
-          borderColor: '#d3d3d3',
-          borderRadius: 5,
-          borderWidth: 1,
-        }}
-      >
-        <Image
-          source={{ uri: property.images[0] }}
-          style={{ height: 250, width: WIDTH, borderTopLeftRadius: 5, borderTopRightRadius: 5 }}
+      <View>
+        <FlatList
+          data={property.images}
+          horizontal
+          keyExtractor={(item) => item}
+          pagingEnabled
+          ref={(ref) => {
+            flatListRef.current = ref;
+          }}
+          renderItem={({ item, index }) => {
+            return (
+              <Image
+                source={{ uri: item }}
+                style={{
+                  height: 225,
+                  width: WIDTH,
+                  borderTopLeftRadius: 5,
+                  borderTopRightRadius: 5,
+                  resizeMode: 'contain',
+                }}
+              />
+            );
+          }}
+          showsHorizontalScrollIndicator={false}
+          snapToAlignment="center"
+          viewabilityConfig={viewConfig}
         />
-        <View style={{ paddingVertical: 10, paddingHorizontal: 5 }}>
+        <EvilIcons
+          style={{ left: 5, position: 'absolute', top: 95 }}
+          name="chevron-left"
+          color={theme['color-primary-500']}
+          size={45}
+        />
+        <EvilIcons
+          style={{ right: 5, position: 'absolute', top: 95 }}
+          name="chevron-right"
+          color={theme['color-primary-500']}
+          size={45}
+        />
+        <View
+          style={{
+            borderColor: '#d3d3d3',
+            borderBottomLeftRadius: 5,
+            borderBottomRightRadius: 5,
+            borderWidth: 1,
+            paddingVertical: 10,
+            paddingHorizontal: 5,
+          }}
+        >
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
             <Text category={'s1'}>
               ${property.rentLow.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} - $
               {property.rentHigh.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
             </Text>
 
-            <EvilIcons name="heart" size={24} color={theme['color-success-500']} />
+            <EvilIcons name="heart" size={24} color={theme['color-success-600']} />
           </View>
           <Text category={'c1'}>
             {property.bedroomLow} - {property.bedroomHigh} Beds
