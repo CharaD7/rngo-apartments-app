@@ -1,142 +1,77 @@
-import React, { useRef } from 'react';
-import { Dimensions, FlatList, Image, StyleSheet, View } from 'react-native';
+import React from 'react';
+import { FlatList } from 'react-native';
 
-import { EvilIcons } from '@expo/vector-icons';
-import { Button, Text } from '@ui-kitten/components';
-
+import { Card } from '../components/Card';
 import { Screen } from '../components/Screen';
-import { theme } from '../theme';
-
-const LISTMARGIN = 10;
-const WIDTH = Dimensions.get('screen').width - LISTMARGIN * 2;
+import { LISTMARGIN } from '../constants/ScreenConstants';
 
 const SearchScreen = () => {
-  const property = {
-    images: [
-      'https://images.unsplash.com/photo-1493246318656-5bfd4cfb29b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-      'https://images.unsplash.com/photo-1466098672325-c9ddda4b7975?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-    ],
-    rentLow: 3750,
-    rentHigh: 31054,
-    bedroomLow: 1,
-    bedroomHigh: 5,
-    name: 'The Hamilton',
-    street: '555 ME 34th St',
-    city: 'Miami',
-    state: 'Florida',
-    zip: 33137,
-    tags: ['Parking'],
-  };
-
-  const flatListRef = useRef<FlatList | null>(null);
-  const viewConfig = { viewAreaCoveragePercentThreshold: 95 };
+  const properties = [
+    {
+      id: 1,
+      images: [
+        'https://images.unsplash.com/photo-1493246318656-5bfd4cfb29b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+        'https://images.unsplash.com/photo-1466098672325-c9ddda4b7975?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+      ],
+      rentLow: 3750,
+      rentHigh: 31054,
+      bedroomLow: 1,
+      bedroomHigh: 5,
+      name: 'The Hamilton',
+      street: '555 ME 34th St',
+      city: 'Miami',
+      state: 'Florida',
+      zip: 33137,
+      tags: ['Parking'],
+    },
+    {
+      id: 2,
+      images: [
+        'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+        'https://images.unsplash.com/photo-1602941525421-8f8b81d3edbb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=853&q=80',
+      ],
+      rentLow: 4312,
+      rentHigh: 77463,
+      bedroomLow: 1,
+      bedroomHigh: 5,
+      name: 'The Nottingham',
+      street: '112 NO Nottingham St',
+      city: 'Nottingham',
+      state: '',
+      zip: 19302,
+      tags: ['Pool'],
+    },
+    {
+      id: 3,
+      images: [
+        'https://images.unsplash.com/photo-1600585152915-d208bec867a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=852&q=80',
+        'https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+        'https://images.unsplash.com/photo-1605146769289-440113cc3d00?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+      ],
+      rentLow: 6754,
+      rentHigh: 96841,
+      bedroomLow: 1,
+      bedroomHigh: 5,
+      name: 'The Luxurious',
+      street: '142 OX Oxford St',
+      city: 'Oxford',
+      state: 'Ohio',
+      zip: 85462,
+      tags: ['Luxury'],
+    },
+  ];
 
   return (
     <Screen style={{ marginHorizontal: LISTMARGIN }}>
-      <View>
-        <FlatList
-          data={property.images}
-          horizontal
-          keyExtractor={(item) => item}
-          pagingEnabled
-          ref={(ref) => {
-            flatListRef.current = ref;
-          }}
-          renderItem={({ item, index }) => {
-            return (
-              <Image
-                source={{ uri: item }}
-                style={{
-                  height: 225,
-                  width: WIDTH,
-                  borderTopLeftRadius: 5,
-                  borderTopRightRadius: 5,
-                  resizeMode: 'contain',
-                }}
-              />
-            );
-          }}
-          showsHorizontalScrollIndicator={false}
-          snapToAlignment="center"
-          viewabilityConfig={viewConfig}
-        />
-        <EvilIcons
-          style={{ left: 5, position: 'absolute', top: 95 }}
-          name="chevron-left"
-          color={theme['color-primary-500']}
-          size={45}
-        />
-        <EvilIcons
-          style={{ right: 5, position: 'absolute', top: 95 }}
-          name="chevron-right"
-          color={theme['color-primary-500']}
-          size={45}
-        />
-        <View
-          style={{
-            borderColor: '#d3d3d3',
-            borderBottomLeftRadius: 5,
-            borderBottomRightRadius: 5,
-            borderWidth: 1,
-            paddingVertical: 10,
-            paddingHorizontal: 5,
-          }}
-        >
-          <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-            <Text category={'s1'}>
-              ${property.rentLow.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} - $
-              {property.rentHigh.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-            </Text>
-
-            <EvilIcons name="heart" size={24} color={theme['color-success-600']} />
-          </View>
-          <Text category={'c1'}>
-            {property.bedroomLow} - {property.bedroomHigh} Beds
-          </Text>
-          <Text category={'c1'} style={{ marginTop: 5 }}>
-            {property.name}
-          </Text>
-          <Text category={'c1'}>{property.street}</Text>
-          <Text category={'c1'}>
-            {property.city}, {property.state} {property.zip}
-          </Text>
-
-          <Text category={'c1'} style={{ marginTop: 5 }}>
-            {property.tags.map((tag, index) =>
-              index === property.tags.length - 1 ? tag : `${tag}, `,
-            )}
-          </Text>
-
-          <View
-            style={{
-              flexDirection: 'row',
-              marginTop: 5,
-              justifyContent: 'space-between',
-            }}
-          >
-            <Button
-              appearance={'ghost'}
-              onPress={() => console.log('Email the property manager')}
-              size="small"
-              style={{
-                borderColor: theme['color-primary-500'],
-                width: '49%',
-              }}
-            >
-              Email
-            </Button>
-            <Button
-              size="small"
-              onPress={() => console.log('Call the property manager')}
-              style={{
-                width: '49%',
-              }}
-            >
-              Call
-            </Button>
-          </View>
-        </View>
-      </View>
+      <FlatList
+        data={properties}
+        keyExtractor={(item) => item.id.toString()}
+        showsHorizontalScrollIndicator={false}
+        renderItem={({ item }) => <Card style={{ marginVertical: 5 }} property={item} />}
+      />
     </Screen>
   );
 };
