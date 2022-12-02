@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Animated, LayoutChangeEvent } from 'react-native';
+import { Animated, LayoutChangeEvent, StyleSheet } from 'react-native';
 
 import { HEADERHEIGHT } from '../../constants/ScreenConstants';
 
@@ -46,19 +46,22 @@ const AnimatedListHeader = ({ scrollAnimation }: { scrollAnimation: Animated.Val
 
   return (
     <Animated.View
-      style={{
-        backgroundColor: 'red',
-        height: HEADERHEIGHT,
-        left: 0,
-        position: 'absolute',
-        right: 0,
-        top: 0,
-        transform: [{ translateY: navbarTranslate }],
-        zIndex: 1000,
-      }}
+      style={[styles.listHeader, { transform: [{ translateY: navbarTranslate }] }]}
       onLayout={onLayout}
     ></Animated.View>
   );
 };
 
 export default AnimatedListHeader;
+
+const styles = StyleSheet.create({
+  listHeader: {
+    backgroundColor: 'red',
+    height: HEADERHEIGHT,
+    left: 0,
+    position: 'absolute',
+    right: 0,
+    top: 0,
+    zIndex: 1000,
+  },
+});
