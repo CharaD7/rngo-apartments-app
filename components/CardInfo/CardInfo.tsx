@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import { EvilIcons } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
 import { Button, Text } from '@ui-kitten/components';
 
 import { theme } from '../../theme';
@@ -17,7 +17,7 @@ const CardInfo = ({ property }: { property: Property }) => {
           {property.rentHigh.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
         </Text>
 
-        <EvilIcons name="heart" size={24} color={theme['color-success-600']} />
+        <Feather name="heart" size={20} color={theme['color-success-600']} />
       </RowMeta>
       <Text category={'c1'}>
         {property.bedroomLow} - {property.bedroomHigh} Beds

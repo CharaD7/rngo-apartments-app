@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { FlatList, Image, Pressable, StyleSheet, View } from 'react-native';
 
-import { EvilIcons } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
 
 import { WIDTH } from '../../constants/ScreenConstants';
 import { theme } from '../../theme';
@@ -62,10 +62,10 @@ const Carousel = ({ images }: { images: string[] }) => {
         viewabilityConfig={viewConfig}
       />
       <Pressable onPress={handlePressLeft} style={[{ left: 5 }, styles.chevron]}>
-        <EvilIcons name="chevron-left" color={theme['color-primary-500']} size={45} />
+        <Feather name="chevron-left" color={theme['color-primary-500']} size={25} />
       </Pressable>
       <Pressable onPress={handlePressRight} style={[{ right: 5 }, styles.chevron]}>
-        <EvilIcons name="chevron-right" color={theme['color-primary-500']} size={45} />
+        <Feather name="chevron-right" color={theme['color-primary-500']} size={25} />
       </Pressable>
     </View>
   );

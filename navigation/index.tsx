@@ -6,7 +6,7 @@
 import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
 
-import { EvilIcons } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { DarkTheme, DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -89,9 +89,6 @@ function BottomTabNavigator() {
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
  */
-function TabBarIcon(props: {
-  name: React.ComponentProps<typeof EvilIcons>['name'];
-  color: string;
-}) {
-  return <EvilIcons size={30} style={{ marginBottom: -3 }} {...props} />;
+function TabBarIcon(props: { name: React.ComponentProps<typeof Feather>['name']; color: string }) {
+  return <Feather size={25} style={{ marginBottom: -3 }} {...props} />;
 }
