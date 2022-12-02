@@ -1,9 +1,10 @@
-import React from 'react';
-import { FlatList } from 'react-native';
+import React, { useState } from 'react';
+import { Animated } from 'react-native';
 
+import { AnimatedListHeader } from '../components/AnimatedHeader';
 import { Card } from '../components/Card';
 import { Screen } from '../components/Screen';
-import { LISTMARGIN } from '../constants/ScreenConstants';
+import { HEADERHEIGHT, LISTMARGIN } from '../constants/ScreenConstants';
 
 const SearchScreen = () => {
   const properties = [
@@ -64,13 +65,31 @@ const SearchScreen = () => {
     },
   ];
 
+  const [scrollAnimation] = useState(new Animated.Value(0));
   return (
-    <Screen style={{ marginHorizontal: LISTMARGIN }}>
-      <FlatList
+    <Screen>
+      <AnimatedListHeader scrollAnimation={scrollAnimation} />
+      <Animated.FlatList
+        bounces={false}
+        contentContainerStyle={{ paddingTop: HEADERHEIGHT - 20 }}
         data={properties}
         keyExtractor={(item) => item.id.toString()}
-        showsHorizontalScrollIndicator={false}
+        onScroll={Animated.event(
+          [
+            {
+              nativeEvent: {
+                contentOffset: {
+                  y: scrollAnimation,
+                },
+              },
+            },
+          ],
+          { useNativeDriver: true },
+        )}
         renderItem={({ item }) => <Card style={{ marginVertical: 5 }} property={item} />}
+        scrollEventThrottle={16}
+        showsHorizontalScrollIndicator={false}
+        style={{ marginHorizontal: LISTMARGIN }}
       />
     </Screen>
   );
