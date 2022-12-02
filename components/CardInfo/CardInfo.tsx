@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   container: {
-    borderColor: '#d3d3d3',
+    borderColor: theme['color-gray'],
     borderBottomLeftRadius: 5,
     borderBottomRightRadius: 5,
     borderWidth: 1,
