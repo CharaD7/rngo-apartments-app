@@ -3,7 +3,6 @@ import {
   Animated,
   FlatList,
   LayoutChangeEvent,
-  Platform,
   StyleSheet,
   TouchableOpacity,
   View,
@@ -15,6 +14,7 @@ import { Button, Divider, Text } from '@ui-kitten/components';
 import { HEADERHEIGHT, LISTMARGIN } from '../../constants/ScreenConstants';
 import { theme } from '../../theme';
 import { RowMeta } from '../CardInfo';
+import { HeaderInput } from '../HeaderSearch';
 
 const AnimatedListHeader = ({ scrollAnimation }: { scrollAnimation: Animated.Value }) => {
   const [offsetAnimation] = useState(new Animated.Value(0));
@@ -86,21 +86,7 @@ const AnimatedListHeader = ({ scrollAnimation }: { scrollAnimation: Animated.Val
       onLayout={onLayout}
     >
       <View style={{ marginHorizontal: LISTMARGIN }}>
-        <TouchableOpacity
-          onPress={() => console.log('navigate to input screen')}
-          style={{
-            borderColor: theme['color-gray'],
-            borderRadius: 30,
-            borderWidth: 1,
-            marginTop: Platform.OS === 'ios' ? 50 : 40,
-            padding: 10,
-          }}
-        >
-          <RowMeta style={{ alignItems: 'center' }}>
-            <Feather name="search" color={theme['color-primary-500']} size={20} />
-            <Text style={{ right: 250, color: theme['color-gray'] }}>Find a Location</Text>
-          </RowMeta>
-        </TouchableOpacity>
+        <HeaderInput />
         <FlatList
           data={filterButtons}
           horizontal
@@ -157,22 +143,23 @@ const AnimatedListHeader = ({ scrollAnimation }: { scrollAnimation: Animated.Val
           </TouchableOpacity>
         </RowMeta>
         <RowMeta>
-          <TouchableOpacity
-            onPress={() => console.log('sort')}
-            style={{ flexDirection: 'row', marginHorizontal: LISTMARGIN }}
-          >
-            <Feather name="layers" color={theme['color-info-500']} size={18} />
-            <Text category={'c1'} style={{ color: theme['color-info-500'], fontWeight: 'bold' }}>
-              {' '}
-              Sort{' '}
-            </Text>
+          <TouchableOpacity onPress={() => console.log('sort')}>
+            <RowMeta style={{ alignItems: 'center', marginHorizontal: LISTMARGIN }}>
+              <Feather name="layers" color={theme['color-info-500']} size={18} />
+              <Text category={'c1'} style={{ color: theme['color-info-500'], fontWeight: 'bold' }}>
+                {' '}
+                Sort{' '}
+              </Text>
+            </RowMeta>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => console.log('map')} style={{ flexDirection: 'row' }}>
-            <Feather name="map" color={theme['color-info-500']} size={18} />
-            <Text category={'c1'} style={{ color: theme['color-info-500'], fontWeight: 'bold' }}>
-              {' '}
-              Map{' '}
-            </Text>
+          <TouchableOpacity onPress={() => console.log('map')}>
+            <RowMeta style={{ alignItems: 'center', marginLeft: 10 }}>
+              <Feather name="map" color={theme['color-info-500']} size={18} />
+              <Text category={'c1'} style={{ color: theme['color-info-500'], fontWeight: 'bold' }}>
+                {' '}
+                Map{' '}
+              </Text>
+            </RowMeta>
           </TouchableOpacity>
         </RowMeta>
       </RowMeta>
