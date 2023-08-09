@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Animated } from 'react-native';
 
-import { AnimatedListHeader } from '../components/AnimatedHeader';
-import { Card } from '../components/Card';
-import { Screen } from '../components/Screen';
-import { HEADERHEIGHT, LISTMARGIN } from '../constants/ScreenConstants';
+import { AnimatedListHeader } from '~components/AnimatedHeader';
+import { Card } from '~components/Card';
+import { Screen } from '~components/Screen';
+import { HEADERHEIGHT, LISTMARGIN } from '~constants/ScreenConstants';
 
 const SearchScreen = () => {
   const properties = [

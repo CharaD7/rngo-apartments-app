@@ -118,3 +118,163 @@
   15: clone3
              at ./misc/../sysdeps/unix/sysv/linux/x86_64/clone3.S:81
 
+2023-08-09 10:44:08 - Neovide panicked with the message 'Focus Lost Failed: NeovimError(Some(0), "FocusLost Autocommands for \"*\": Vim(append):Error executing lua callback: vim/_editor.lua:0: FocusLost Autocommands for \"*\"..script nvim_exec2() called at FocusLost Autocommands for \"*\":0: Vim(wall):E13: File exists (add ! to override)\nstack traceback:\n\t[C]: in function 'nvim_exec2'\n\tvim/_editor.lua: in function 'cmd'\n\t/home/charapyge/.config/nvim/after/plugin/autocommands.lua:61: in function </home/charapyge/.config/nvim/after/plugin/autocommands.lua:60>")'. (File: src/bridge/ui_commands.rs; Line: 143, Column: 18)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: start_thread
+             at ./nptl/pthread_create.c:442:8
+  15: clone3
+             at ./misc/../sysdeps/unix/sysv/linux/x86_64/clone3.S:81
+
+2023-08-09 10:44:13 - Neovide panicked with the message 'Focus Lost Failed: NeovimError(Some(0), "FocusLost Autocommands for \"*\": Vim(append):Error executing lua callback: vim/_editor.lua:0: FocusLost Autocommands for \"*\"..script nvim_exec2() called at FocusLost Autocommands for \"*\":0: Vim(wall):E13: File exists (add ! to override)\nstack traceback:\n\t[C]: in function 'nvim_exec2'\n\tvim/_editor.lua: in function 'cmd'\n\t/home/charapyge/.config/nvim/after/plugin/autocommands.lua:61: in function </home/charapyge/.config/nvim/after/plugin/autocommands.lua:60>")'. (File: src/bridge/ui_commands.rs; Line: 143, Column: 18)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: start_thread
+             at ./nptl/pthread_create.c:442:8
+  15: clone3
+             at ./misc/../sysdeps/unix/sysv/linux/x86_64/clone3.S:81
+
+2023-08-09 10:44:39 - Neovide panicked with the message 'Focus Lost Failed: NeovimError(Some(0), "FocusLost Autocommands for \"*\": Vim(append):Error executing lua callback: vim/_editor.lua:0: FocusLost Autocommands for \"*\"..script nvim_exec2() called at FocusLost Autocommands for \"*\":0: Vim(wall):E13: File exists (add ! to override)\nstack traceback:\n\t[C]: in function 'nvim_exec2'\n\tvim/_editor.lua: in function 'cmd'\n\t/home/charapyge/.config/nvim/after/plugin/autocommands.lua:61: in function </home/charapyge/.config/nvim/after/plugin/autocommands.lua:60>")'. (File: src/bridge/ui_commands.rs; Line: 143, Column: 18)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: start_thread
+             at ./nptl/pthread_create.c:442:8
+  15: clone3
+             at ./misc/../sysdeps/unix/sysv/linux/x86_64/clone3.S:81
+
+2023-08-09 10:45:43 - Neovide panicked with the message 'Focus Lost Failed: NeovimError(Some(0), "FocusLost Autocommands for \"*\": Vim(append):Error executing lua callback: vim/_editor.lua:0: FocusLost Autocommands for \"*\"..script nvim_exec2() called at FocusLost Autocommands for \"*\":0: Vim(wall):E13: File exists (add ! to override)\nstack traceback:\n\t[C]: in function 'nvim_exec2'\n\tvim/_editor.lua: in function 'cmd'\n\t/home/charapyge/.config/nvim/after/plugin/autocommands.lua:61: in function </home/charapyge/.config/nvim/after/plugin/autocommands.lua:60>")'. (File: src/bridge/ui_commands.rs; Line: 143, Column: 18)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: start_thread
+             at ./nptl/pthread_create.c:442:8
+  15: clone3
+             at ./misc/../sysdeps/unix/sysv/linux/x86_64/clone3.S:81
+
+2023-08-09 10:45:52 - Neovide panicked with the message 'Focus Lost Failed: NeovimError(Some(0), "FocusLost Autocommands for \"*\": Vim(append):Error executing lua callback: vim/_editor.lua:0: FocusLost Autocommands for \"*\"..script nvim_exec2() called at FocusLost Autocommands for \"*\":0: Vim(wall):E13: File exists (add ! to override)\nstack traceback:\n\t[C]: in function 'nvim_exec2'\n\tvim/_editor.lua: in function 'cmd'\n\t/home/charapyge/.config/nvim/after/plugin/autocommands.lua:61: in function </home/charapyge/.config/nvim/after/plugin/autocommands.lua:60>")'. (File: src/bridge/ui_commands.rs; Line: 143, Column: 18)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: start_thread
+             at ./nptl/pthread_create.c:442:8
+  15: clone3
+             at ./misc/../sysdeps/unix/sysv/linux/x86_64/clone3.S:81
+
+2023-08-09 10:45:52 - Neovide panicked with the message 'Focus Lost Failed: NeovimError(Some(0), "FocusLost Autocommands for \"*\": Vim(append):Error executing lua callback: vim/_editor.lua:0: FocusLost Autocommands for \"*\"..script nvim_exec2() called at FocusLost Autocommands for \"*\":0: Vim(wall):E13: File exists (add ! to override)\nstack traceback:\n\t[C]: in function 'nvim_exec2'\n\tvim/_editor.lua: in function 'cmd'\n\t/home/charapyge/.config/nvim/after/plugin/autocommands.lua:61: in function </home/charapyge/.config/nvim/after/plugin/autocommands.lua:60>")'. (File: src/bridge/ui_commands.rs; Line: 143, Column: 18)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: start_thread
+             at ./nptl/pthread_create.c:442:8
+  15: clone3
+             at ./misc/../sysdeps/unix/sysv/linux/x86_64/clone3.S:81
+
+2023-08-09 10:47:31 - Neovide panicked with the message 'Focus Lost Failed: NeovimError(Some(0), "FocusLost Autocommands for \"*\": Vim(append):Error executing lua callback: vim/_editor.lua:0: FocusLost Autocommands for \"*\"..script nvim_exec2() called at FocusLost Autocommands for \"*\":0: Vim(wall):E13: File exists (add ! to override)\nstack traceback:\n\t[C]: in function 'nvim_exec2'\n\tvim/_editor.lua: in function 'cmd'\n\t/home/charapyge/.config/nvim/after/plugin/autocommands.lua:61: in function </home/charapyge/.config/nvim/after/plugin/autocommands.lua:60>")'. (File: src/bridge/ui_commands.rs; Line: 143, Column: 18)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: start_thread
+             at ./nptl/pthread_create.c:442:8
+  15: clone3
+             at ./misc/../sysdeps/unix/sysv/linux/x86_64/clone3.S:81
+
+2023-08-09 10:48:44 - Neovide panicked with the message 'Focus Lost Failed: NeovimError(Some(0), "FocusLost Autocommands for \"*\": Vim(append):Error executing lua callback: vim/_editor.lua:0: FocusLost Autocommands for \"*\"..script nvim_exec2() called at FocusLost Autocommands for \"*\":0: Vim(wall):E13: File exists (add ! to override)\nstack traceback:\n\t[C]: in function 'nvim_exec2'\n\tvim/_editor.lua: in function 'cmd'\n\t/home/charapyge/.config/nvim/after/plugin/autocommands.lua:61: in function </home/charapyge/.config/nvim/after/plugin/autocommands.lua:60>")'. (File: src/bridge/ui_commands.rs; Line: 143, Column: 18)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: start_thread
+             at ./nptl/pthread_create.c:442:8
+  15: clone3
+             at ./misc/../sysdeps/unix/sysv/linux/x86_64/clone3.S:81
+

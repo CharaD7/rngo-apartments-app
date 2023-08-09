@@ -8,13 +8,14 @@ import {
   View,
 } from 'react-native';
 
-import { RowMeta } from 'components/CardInfo';
-import { HeaderInput } from 'components/HeaderSearch';
-import { HEADERHEIGHT, LISTMARGIN } from 'constants/ScreenConstants';
-import { theme } from 'theme';
+import { RowMeta } from '~components/CardInfo';
+import { HeaderInput } from '~components/HeaderSearch';
+import { HEADERHEIGHT, LISTMARGIN } from '~constants/ScreenConstants';
 
 import { Feather } from '@expo/vector-icons';
 import { Button, Divider, Text } from '@ui-kitten/components';
+
+import { theme } from '../../theme.ts';
 
 const AnimatedListHeader = ({ scrollAnimation }: { scrollAnimation: Animated.Value }) => {
   const [offsetAnimation] = useState(new Animated.Value(0));

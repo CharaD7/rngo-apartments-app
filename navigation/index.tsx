@@ -6,16 +6,17 @@
 import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
 
+import AccountScreen from '~screens/AccountScreen';
+import SavedScreen from '~screens/SavedScreen';
+import SearchScreen from '~screens/SearchScreen';
+import { RootStackParamList, RootTabParamList } from '~types';
+
 import { Feather } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { DarkTheme, DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import AccountScreen from '../screens/AccountScreen';
-import SavedScreen from '../screens/SavedScreen';
-import SearchScreen from '../screens/SearchScreen';
 import { theme } from '../theme';
-import { RootStackParamList, RootTabParamList } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {

@@ -1,14 +1,15 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
+import { Property } from '~types/property';
+
 import { Feather } from '@expo/vector-icons';
 import { Button, Text } from '@ui-kitten/components';
 
 import { theme } from '../../theme';
-import { Property } from '../../types/property';
 import RowMeta from './RowMeta';
 
-const CardInfo = ({ property }: { property: Property }) => {
+const CardMeta = ({ property }: { property: Property }) => {
   return (
     <View style={styles.container}>
       <RowMeta>
@@ -55,7 +56,7 @@ const CardInfo = ({ property }: { property: Property }) => {
   );
 };
 
-export default CardInfo;
+export default CardMeta;
 
 const styles = StyleSheet.create({
   buttonView: {
