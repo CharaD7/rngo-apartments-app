@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, ViewStyle } from 'react-native';
 
-import { Property } from '../../types/property';
-import { CardInfo } from '../CardInfo';
-import { Carousel } from '../Carousel';
+import { CardInfo } from 'components/CardInfo';
+import { Carousel } from 'components/Carousel';
+import { Property } from 'types/property';
 
 const Card = ({ property, style }: { property: Property; style?: ViewStyle }) => {
   return (

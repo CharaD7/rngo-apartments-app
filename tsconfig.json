@@ -51,14 +51,10 @@
       ]
     },
     "resolveJsonModule": true,
+    "skipLibCheck": true,
     "strict": true,
     "target": "es6"
   },
-  "includes": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".eslintrc.js"
-  ],
   "exclude": [
     "node_modules"
   ]

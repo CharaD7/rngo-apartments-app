@@ -1,4 +1,6 @@
+/* eslint-disable import/no-unresolved */
 import * as React from 'react';
+
 import renderer from 'react-test-renderer';
 
 import { MonoText } from '../StyledText';

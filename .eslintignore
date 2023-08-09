@@ -1,1 +1,4 @@
+.eslintrc.js
+react-native.config.js
+dist/
 node_modules/

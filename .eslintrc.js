@@ -10,8 +10,6 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:@typescript-eslint/recommended',
     'plugin:jest/recommended',
     'plugin:prettier/recommended',
@@ -22,15 +20,22 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
-  ignorePatterns: ['!.*', '**/*.js', 'dist', 'node_modules'],
+  ignorePatterns: ['dist', 'node_modules'],
+  overrides: [
+    {
+      extends: ['plugin:@typescript-eslint/recommended-requiring-type-checking'],
+      files: ['.ts', 'tsx'],
+    },
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 13,
-    project: './tsconfig.json',
+    ecmaVersion: 'latest',
     sourceType: 'module',
+    project: ['./tsconfig.eslint.json'],
+    tsconfigRootDir: __dirname,
   },
   plugins: [
     'jest',
@@ -38,23 +43,68 @@ module.exports = {
     'react',
     'react-hooks',
     'react-native',
+    'simple-import-sort',
     '@typescript-eslint',
     'prettier',
   ],
   rules: {
+    '@typescript-eslint/no-floating-promises': 'warn',
+    '@typescript-eslint/no-namespace': 'warn',
+    // '@typescript-eslint/no-undefined': 'warn',
+    '@typescript-eslint/no-unsafe-argument': 'warn',
+    '@typescript-eslint/no-unsafe-assignment': 'warn',
+    '@typescript-eslint/no-unsafe-call': 'warn',
+    '@typescript-eslint/no-unsafe-member-access': 'warn',
+    '@typescript-eslint/no-use-before-define': [
+      'error',
+      {
+        functions: false,
+        classes: false,
+        variables: false,
+        allowNamedExports: false,
+      },
+    ],
+    'import/first': 'error',
+    'import/newline-after-import': 'error',
+    'import/no-unresolved': ['error', { commonjs: true }],
+    'import/no-extraneous-dependencies': 'error',
     'import/order': [
       'error',
       {
-        groups: [['external', 'builtin'], 'internal', ['sibling', 'parent'], 'index'],
+        groups: [['internal', 'builtin'], 'external', ['sibling', 'parent'], 'object', 'index'],
         pathGroups: [
           {
             pattern: '@(react|react-native)',
-            group: 'external',
+            group: 'internal',
             position: 'before',
           },
           {
-            pattern: '@src/**',
-            group: 'internal',
+            pattern: '~assets/**',
+            group: 'external',
+          },
+          {
+            pattern: '~components/**',
+            group: 'external',
+          },
+          {
+            pattern: '~constants/**',
+            group: 'external',
+          },
+          {
+            pattern: '~hooks/**',
+            group: 'external',
+          },
+          {
+            pattern: '~navigation/**',
+            group: 'external',
+          },
+          {
+            pattern: '~screens/**',
+            group: 'external',
+          },
+          {
+            pattern: '~types/**',
+            group: 'external',
           },
         ],
         pathGroupsExcludedImportTypes: ['internal', 'react'],
@@ -65,21 +115,9 @@ module.exports = {
         },
       },
     ],
-    'linebreak-style': 'off',
     'no-extra-semi': ['error'],
-    '@typescript-eslint/no-namespace': 'off',
-    '@typescript-eslint/no-unsafe-argument': 'off',
-    '@typescript-eslint/no-unsafe-assignment': 'off',
-    '@typescript-eslint/no-unsafe-member-access': 'off',
-    '@typescript-eslint/no-use-before-define': [
-      'error',
-      {
-        functions: false,
-        classes: false,
-        variables: false,
-        allowNamedExports: false,
-      },
-    ],
+    'no-unused-vars': ['warn'],
+    'no-undef': ['warn'],
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     'react-native/no-inline-styles': 'off',
@@ -94,9 +132,6 @@ module.exports = {
     'sort-imports': ['error', { ignoreCase: true, ignoreDeclarationSort: true }],
   },
   settings: {
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
-    },
     'import/resolver': {
       typescript: true,
       node: true,
