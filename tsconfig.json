@@ -7,55 +7,25 @@
     "moduleResolution": "node",
     "noEmit": true,
     "paths": {
-      "~assets": [
-        "./assets"
-      ],
-      "~assets/*": [
-        "./assets/*"
-      ],
-      "~components": [
-        "./components"
-      ],
-      "~components/*": [
-        "./components/*"
-      ],
-      "~constants": [
-        "./constants"
-      ],
-      "~constants/*": [
-        "./constants/*"
-      ],
-      "~hooks": [
-        "./hooks"
-      ],
-      "~hooks/*": [
-        "./hooks/*"
-      ],
-      "~navigation": [
-        "./navigation"
-      ],
-      "~navigation/*": [
-        "./navigation/*"
-      ],
-      "~screens": [
-        "./screens"
-      ],
-      "~screens/*": [
-        "./screens/*"
-      ],
-      "~types": [
-        "./types"
-      ],
-      "~types/*": [
-        "./types/*"
-      ]
+      "~assets": ["./assets"],
+      "~assets/*": ["./assets/*"],
+      "~components": ["./components"],
+      "~components/*": ["./components/*"],
+      "~constants": ["./constants"],
+      "~constants/*": ["./constants/*"],
+      "~hooks": ["./hooks"],
+      "~hooks/*": ["./hooks/*"],
+      "~navigation": ["./navigation"],
+      "~navigation/*": ["./navigation/*"],
+      "~screens": ["./screens"],
+      "~screens/*": ["./screens/*"],
+      "~types": ["./types"],
+      "~types/*": ["./types/*"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
     "target": "es6"
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
