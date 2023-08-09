@@ -15,7 +15,7 @@ import { HEADERHEIGHT, LISTMARGIN } from '~constants/ScreenConstants';
 import { Feather } from '@expo/vector-icons';
 import { Button, Divider, Text } from '@ui-kitten/components';
 
-import { theme } from '../../theme.ts';
+import { theme } from '../../theme';
 
 const AnimatedListHeader = ({ scrollAnimation }: { scrollAnimation: Animated.Value }) => {
   const [offsetAnimation] = useState(new Animated.Value(0));
