@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 
+import useCachedResources from '~hooks/useCachedResources';
+import useColorScheme from '~hooks/useColorScheme';
+
 import * as eva from '@eva-design/eva';
 import { ApplicationProvider, Layout, Text } from '@ui-kitten/components';
 import { useFonts } from 'expo-font';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-import useCachedResources from './hooks/useCachedResources';
-import useColorScheme from './hooks/useColorScheme';
 import { default as mapping } from './mapping.json';
 import Navigation from './navigation';
 import { theme } from './theme';
