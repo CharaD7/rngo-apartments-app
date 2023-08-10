@@ -33,3 +33,10 @@ The following stack of tools is being/was used to build out the web2 aspect of t
 ### Credit
 
  This project is an upgrade of [Jeremy Persing](https://www.youtube.com/@jeremypersing4484)'s apartment application project. If you missed something on the web2 build, be sure to check his YouTube channel, if it has to do with my upgrade, feel free to ping me.
+
+
+
+
+___
+Hello, I am Chara. If you find this helpful, please do share. If you need to get in touch with me by all means, you can connect with me on [telegram](https://t.me/CharaD7), [twitter](https://twitter.com/joy_ayitey), [LinkedIn](http://linkedin.com/in/joy-ayitey-73127699) and on [discord](https://discordapp.com/users/CharaD7#0898)
+___
