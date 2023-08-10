@@ -25,7 +25,10 @@ The following stack of tools is being/was used to build out the web2 aspect of t
 
 #### web3 Aspect
 
-> Not decided yet, thoughts are welcome. In the meantime, you can check my [hunt.town](https://hunt.town/@408656960225935361/) to track what I am working on. You can also [join the town](https://hunt.town/) to meet and collaborate with like-minded people.
+> Not decided yet, thoughts are welcome. In the meantime, you can check my [hunt.town](https://hunt.town/@408656960225935361/) to track what I am working on. You can also [join the town](https://hunt.town/) to meet and collaborate with like-minded people. However, these are the tools or stack I intend to use if nothing comes my way.
+
+* [Algorand](https://algorand.com) - Blockchain network
+* [Reach](https://reach.sh) - Blockchain language for building smart contracts
 
 
 
