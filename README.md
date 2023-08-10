@@ -41,5 +41,5 @@ The following stack of tools is being/was used to build out the web2 aspect of t
 
 
 ___
-Hello, I am Chara. If you find this helpful, please do share. If you need to get in touch with me by all means, you can connect with me on [telegram](https://t.me/CharaD7), [twitter](https://twitter.com/joy_ayitey), [LinkedIn](http://linkedin.com/in/joy-ayitey-73127699) and on [discord](https://discordapp.com/users/CharaD7#0898)
+Hello, I am Chara. If you find this helpful, please do share. If you need to get in touch with me by all means, you can connect with me on [Telegram](https://t.me/CharaD7), [Twitter](https://twitter.com/joy_ayitey), [LinkedIn](http://linkedin.com/in/joy-ayitey-73127699) and on [Discord](https://discordapp.com/users/CharaD7#0898)
 ___
