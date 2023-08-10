@@ -23,7 +23,7 @@ The following stack of tools is being/was used to build out the web2 aspect of t
 * [Amazon S3](https://aws.amazon.com/s3/) - For image storage
 * [PostgreSQL](https://postgresql.org) - For database
 
-#### web2 Aspect
+#### web3 Aspect
 
 > Not decided yet, thoughts are welcome. In the meantime, you can check my [hunt.town](https://hunt.town/@408656960225935361/) to track what I am working on. You can also [join the town](https://hunt.town/) to meet and collaborate with like-minded people.
 
