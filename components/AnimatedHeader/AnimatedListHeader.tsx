@@ -9,11 +9,11 @@ import {
 } from 'react-native';
 
 import { RowMeta } from '~components/CardInfo';
-import { HeaderInput } from '~components/HeaderSearch';
+import { HeaderFilter, HeaderInput } from '~components/HeaderSection';
 import { HEADERHEIGHT, LISTMARGIN } from '~constants/ScreenConstants';
 
 import { Feather } from '@expo/vector-icons';
-import { Button, Divider, Text } from '@ui-kitten/components';
+import { Divider, Text } from '@ui-kitten/components';
 
 import { theme } from '../../theme';
 
@@ -58,29 +58,6 @@ const AnimatedListHeader = ({ scrollAnimation }: { scrollAnimation: Animated.Val
     );
   };
 
-  const filterButtons = [
-    {
-      iconName: 'sliders',
-      onPress: () => console.log('filter all'),
-    },
-    {
-      label: 'Price',
-      onPress: () => console.log('price'),
-    },
-    {
-      label: 'Beds & Baths',
-      onPress: () => console.log('beds & baths'),
-    },
-    {
-      label: 'Move-in Date',
-      onPress: () => console.log('move-in date'),
-    },
-    {
-      label: 'Pets',
-      onPress: () => console.log('pets'),
-    },
-  ];
-
   return (
     <Animated.View
       style={[styles.listHeader, { transform: [{ translateY: navbarTranslate }] }]}
@@ -88,36 +65,7 @@ const AnimatedListHeader = ({ scrollAnimation }: { scrollAnimation: Animated.Val
     >
       <View style={{ marginHorizontal: LISTMARGIN }}>
         <HeaderInput />
-        <FlatList
-          data={filterButtons}
-          horizontal
-          keyExtractor={(_, index) => index.toString()}
-          renderItem={({ item, index }) => {
-            if (item.iconName) {
-              return (
-                <Button
-                  accessoryLeft={
-                    <Feather
-                      name={item.iconName as any}
-                      size={20}
-                      color={theme['color-primary-500']}
-                    />
-                  }
-                  appearance={'ghost'}
-                  onPress={item.onPress}
-                  style={[styles.filterBtnStyle, { width: 48 }]}
-                ></Button>
-              );
-            }
-            return (
-              <Button appearance={'ghost'} onPress={item.onPress} style={styles.filterBtnStyle}>
-                {item.label}
-              </Button>
-            );
-          }}
-          showsHorizontalScrollIndicator={false}
-          style={{ marginVertical: 10 }}
-        />
+        <HeaderFilter />
       </View>
       <Divider style={{ backgroundColor: theme['color-gray'] }} />
       <RowMeta
@@ -171,11 +119,6 @@ const AnimatedListHeader = ({ scrollAnimation }: { scrollAnimation: Animated.Val
 export default AnimatedListHeader;
 
 const styles = StyleSheet.create({
-  filterBtnStyle: {
-    borderColor: theme['color-gray'],
-    borderRadius: 30,
-    marginHorizontal: 3,
-  },
   listHeader: {
     backgroundColor: '#fff',
     height: HEADERHEIGHT,

@@ -27,7 +27,7 @@ The following stack of tools is being/was used to build out the web2 aspect of t
 
 > The following tools were used in designing the frontend of the mobile application
 
-* **UI** - [UI Kitten]() _(Provides an intuitive shade of design colors from which one can generate a theme for a design saved to a theme.ts or theme.js file)_
+* **UI** - [UI Kitten](https://eva.design) _(Provides an intuitive shade of design colors from which one can generate a theme for a design saved to a theme.ts or theme.js file)_
 
 #### web3 Aspect
 
