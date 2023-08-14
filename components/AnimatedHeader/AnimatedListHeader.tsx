@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Animated,
-  FlatList,
-  LayoutChangeEvent,
-  StyleSheet,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { Animated, LayoutChangeEvent, StyleSheet, TouchableOpacity, View } from 'react-native';
 
 import { RowMeta } from '~components/CardInfo';
 import { HeaderFilter, HeaderInput } from '~components/HeaderSection';
