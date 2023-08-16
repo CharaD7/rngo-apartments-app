@@ -56,7 +56,7 @@ const AnimatedListHeader = ({ scrollAnimation }: { scrollAnimation: Animated.Val
       style={[styles.listHeader, { transform: [{ translateY: navbarTranslate }] }]}
       onLayout={onLayout}
     >
-      <View style={{ marginHorizontal: LISTMARGIN }}>
+      <View style={styles.defaultMarginHorizontal}>
         <HeaderInput />
         <HeaderFilter />
       </View>
@@ -120,5 +120,8 @@ const styles = StyleSheet.create({
     right: 0,
     top: 0,
     zIndex: 1000,
+  },
+  defaultMarginHorizontal: {
+    marginHorizontal: LISTMARGIN,
   },
 });
