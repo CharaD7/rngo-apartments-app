@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { Animated, LayoutChangeEvent, StyleSheet, TouchableOpacity, View } from 'react-native';
+import { Animated, LayoutChangeEvent, StyleSheet, View } from 'react-native';
 
-import { RowMeta } from '~components/CardInfo';
-import { HeaderFilter, HeaderInput } from '~components/HeaderSection';
+import { HeaderFilter, HeaderInput, HeaderLogistics } from '~components/HeaderSection';
 import { HEADERHEIGHT, LISTMARGIN } from '~constants/ScreenConstants';
 
-import { Feather } from '@expo/vector-icons';
-import { Divider, Text } from '@ui-kitten/components';
+import { Divider } from '@ui-kitten/components';
 
 import { theme } from '../../theme';
 
@@ -60,51 +58,8 @@ const AnimatedListHeader = ({ scrollAnimation }: { scrollAnimation: Animated.Val
         <HeaderInput />
         <HeaderFilter />
       </View>
-      <Divider style={{ backgroundColor: theme['color-gray'] }} />
-      <RowMeta
-        style={{
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          marginHorizontal: LISTMARGIN,
-          marginVertical: 5,
-        }}
-      >
-        <RowMeta>
-          <Feather color={theme['color-primary-500']} name="map-pin" size={18} />
-          <Text category={'c1'} appearance={'hint'}>
-            12 Available
-          </Text>
-          <TouchableOpacity onPress={() => console.log('save')}>
-            <Text
-              category={'c1'}
-              style={{ color: theme['color-info-500'], fontWeight: 'bold', marginLeft: 5 }}
-            >
-              {' '}
-              Save{' '}
-            </Text>
-          </TouchableOpacity>
-        </RowMeta>
-        <RowMeta>
-          <TouchableOpacity onPress={() => console.log('sort')}>
-            <RowMeta style={{ alignItems: 'center', marginHorizontal: LISTMARGIN }}>
-              <Feather name="layers" color={theme['color-info-500']} size={18} />
-              <Text category={'c1'} style={{ color: theme['color-info-500'], fontWeight: 'bold' }}>
-                {' '}
-                Sort{' '}
-              </Text>
-            </RowMeta>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => console.log('map')}>
-            <RowMeta style={{ alignItems: 'center', marginLeft: 10 }}>
-              <Feather name="map" color={theme['color-info-500']} size={18} />
-              <Text category={'c1'} style={{ color: theme['color-info-500'], fontWeight: 'bold' }}>
-                {' '}
-                Map{' '}
-              </Text>
-            </RowMeta>
-          </TouchableOpacity>
-        </RowMeta>
-      </RowMeta>
+      <Divider style={styles.divider} />
+      <HeaderLogistics />
     </Animated.View>
   );
 };
@@ -123,5 +78,8 @@ const styles = StyleSheet.create({
   },
   defaultMarginHorizontal: {
     marginHorizontal: LISTMARGIN,
+  },
+  divider: {
+    backgroundColor: theme['color-gray'],
   },
 });
