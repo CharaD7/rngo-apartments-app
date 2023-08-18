@@ -12,7 +12,7 @@ import { theme } from '../../theme';
 const HeaderLogistics = () => {
   return (
     <RowMeta style={styles.container}>
-      <RowMeta>
+      <RowMeta style={styles.center}>
         <Feather color={theme['color-primary-500']} name="map-pin" size={18} />
         <Text category={'c1'} appearance={'hint'}>
           12 Available
