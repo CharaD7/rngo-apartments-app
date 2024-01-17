@@ -40,14 +40,14 @@ const CardMeta = ({ property }: { property: Property }) => {
           appearance={'ghost'}
           onPress={() => console.log('Email the property manager')}
           size="small"
-          style={[styles.buttonView, styles.width, { borderColor: theme['color-primary-500'] }]}
+          style={[styles.buttonView, { borderColor: theme['color-primary-500'] }]}
         >
           Email
         </Button>
         <Button
           size="small"
           onPress={() => console.log('Call the property manager')}
-          style={[styles.buttonView, styles.width]}
+          style={[styles.buttonView]}
         >
           Call
         </Button>
@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'center',
+    width: '49%',
   },
   container: {
     borderColor: theme['color-gray'],
