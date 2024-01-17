@@ -77,6 +77,6 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   width: {
-    width: '49%',
+    width: '50%',
   },
 });
