@@ -15,7 +15,7 @@ const HeaderSearchInput = () => {
     >
       <RowMeta style={{ alignItems: 'center' }}>
         <Feather name="search" color={theme['color-primary-500']} size={20} />
-        <Text style={{ right: 250, color: theme['color-gray'] }}>Find a Location</Text>
+        <Text style={{ right: 220, color: theme['color-gray'] }}>Find a Location</Text>
       </RowMeta>
     </TouchableOpacity>
   );
