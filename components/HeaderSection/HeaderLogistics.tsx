@@ -33,7 +33,18 @@ const HeaderLogisticsButton = ({
   );
 };
 
-const HeaderLogistics = () => {
+const HeaderLogistics = ({
+  mapShown,
+  setMapShown,
+}: {
+  mapShown: boolean;
+  setMapShown: (mapShown: boolean) => void;
+}) => {
+  const handleMapToggle = () => {
+    if (mapShown) return setMapShown(false);
+    setMapShown(true);
+  };
+
   return (
     <RowMeta style={styles.container}>
       <RowMeta style={styles.center}>
@@ -54,7 +65,12 @@ const HeaderLogistics = () => {
           onPress={() => console.log('sort')}
           style={{ marginHorizontal: LISTMARGIN }}
         />
-        <HeaderLogisticsButton iconName="map" label="Map" onPress={() => console.log('map')} />
+        {mapShown ? (
+          <HeaderLogisticsButton iconName="list" label="List" onPress={handleMapToggle} />
+        ) : (
+          <HeaderLogisticsButton iconName="map" label="Map" onPress={handleMapToggle} />
+        )}
+        {/* <HeaderLogisticsButton iconName="map" label="Map" onPress={() => console.log('map')} /> */}
       </RowMeta>
     </RowMeta>
   );
