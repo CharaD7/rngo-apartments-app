@@ -8,7 +8,15 @@ import { Divider } from '@ui-kitten/components';
 
 import { theme } from '../../theme';
 
-const AnimatedListHeader = ({ scrollAnimation }: { scrollAnimation: Animated.Value }) => {
+const AnimatedListHeader = ({
+  scrollAnimation,
+  mapShown,
+  setMapShown,
+}: {
+  scrollAnimation: Animated.Value;
+  mapShown: boolean;
+  setMapShown: (mapShown: boolean) => void;
+}) => {
   const [offsetAnimation] = useState(new Animated.Value(0));
   const [clampedScroll, setClampedScroll] = useState(
     Animated.diffClamp(
@@ -59,7 +67,7 @@ const AnimatedListHeader = ({ scrollAnimation }: { scrollAnimation: Animated.Val
         <HeaderFilter />
       </View>
       <Divider style={styles.divider} />
-      <HeaderLogistics />
+      <HeaderLogistics mapShown={mapShown} setMapShown={setMapShown} />
     </Animated.View>
   );
 };
