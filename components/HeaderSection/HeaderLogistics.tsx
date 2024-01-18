@@ -9,6 +9,30 @@ import { Text } from '@ui-kitten/components';
 
 import { theme } from '../../theme';
 
+const HeaderLogisticsButton = ({
+  iconName,
+  label,
+  onPress,
+  style,
+}: {
+  iconName?: any;
+  label: string;
+  onPress: () => void;
+  style?: any;
+}) => {
+  return (
+    <TouchableOpacity onPress={onPress}>
+      <RowMeta style={[styles.center, style]}>
+        {iconName ? <Feather name={iconName} color={theme['color-info-500']} size={18} /> : null}
+        <Text category={'c1'} style={styles.boldInfo}>
+          {' '}
+          {label}{' '}
+        </Text>
+      </RowMeta>
+    </TouchableOpacity>
+  );
+};
+
 const HeaderLogistics = () => {
   return (
     <RowMeta style={styles.container}>
@@ -17,32 +41,20 @@ const HeaderLogistics = () => {
         <Text category={'c1'} appearance={'hint'}>
           12 Available
         </Text>
-        <TouchableOpacity onPress={() => console.log('save')}>
-          <Text category={'c1'} style={[styles.boldInfo, { marginLeft: 5 }]}>
-            {' '}
-            Save{' '}
-          </Text>
-        </TouchableOpacity>
+        <HeaderLogisticsButton
+          label="Save"
+          onPress={() => console.log('save')}
+          style={{ marginLeft: 5 }}
+        />
       </RowMeta>
       <RowMeta>
-        <TouchableOpacity onPress={() => console.log('sort')}>
-          <RowMeta style={[styles.center, { marginHorizontal: LISTMARGIN }]}>
-            <Feather name="layers" color={theme['color-info-500']} size={18} />
-            <Text category={'c1'} style={styles.boldInfo}>
-              {' '}
-              Sort{' '}
-            </Text>
-          </RowMeta>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => console.log('map')}>
-          <RowMeta style={[styles.center, { marginLeft: 10 }]}>
-            <Feather name="map" color={theme['color-info-500']} size={18} />
-            <Text category={'c1'} style={styles.boldInfo}>
-              {' '}
-              Map{' '}
-            </Text>
-          </RowMeta>
-        </TouchableOpacity>
+        <HeaderLogisticsButton
+          iconName="layers"
+          label="Sort"
+          onPress={() => console.log('sort')}
+          style={{ marginHorizontal: LISTMARGIN }}
+        />
+        <HeaderLogisticsButton iconName="map" label="Map" onPress={() => console.log('map')} />
       </RowMeta>
     </RowMeta>
   );
@@ -58,6 +70,7 @@ const styles = StyleSheet.create({
   boldInfo: {
     color: theme['color-info-500'],
     fontWeight: 'bold',
+    marginLeft: 5,
   },
   center: {
     alignItems: 'center',
