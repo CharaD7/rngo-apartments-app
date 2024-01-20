@@ -10,6 +10,7 @@
           "~assets/*": "./assets/*",
           "~components": "./components",
           "~components/*": "./components/*",
+          "~data": "./data",
           "~constants": "./constants",
           "~constants/*": "./constants/*",
           "~hooks": "./hooks",
