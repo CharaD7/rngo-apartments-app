@@ -34,7 +34,7 @@ const Map = ({ properties }: { properties: Property[] }) => {
 
   return (
     <View style={styles.container}>
-      <MapView style={styles.map}>
+      <MapView style={styles.map} userInterfaceStyle={'light'} ref={mapRef}>
         {properties.map((i, index) => (
           <MapMarker
             lat={i.lat}
