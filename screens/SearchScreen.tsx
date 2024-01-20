@@ -45,7 +45,6 @@ const SearchScreen = () => {
           renderItem={({ item }) => <Card style={{ marginVertical: 5 }} property={item} />}
           scrollEventThrottle={16}
           showsHorizontalScrollIndicator={false}
-          style={{ marginHorizontal: LISTMARGIN }}
         />
       )}
     </Screen>
