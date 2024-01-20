@@ -11,4 +11,6 @@ export type Property = {
   street: string;
   tags: string[];
   zip: number;
+  lat: number;
+  lng: number;
 };
