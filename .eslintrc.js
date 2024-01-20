@@ -87,6 +87,10 @@ module.exports = {
             group: 'external',
           },
           {
+            pattern: '~data/**',
+            group: 'external',
+          },
+          {
             pattern: '~constants/**',
             group: 'external',
           },
